@@ -16,10 +16,11 @@ DIR=$(dirname "$LOC")
 # Change the appearance of the module identifier. if this is set to "unicode", then symbols will be used as identifiers instead of text. E.g. [📪 0] instead of [MAIL 0].
 # Requires a font with adequate unicode character support
 export IDENTIFIER="unicode"
+#export IDENTIFIER="un"
 
 # Change the charachter(s) used to seperate modules. If two are used, they will be placed at the start and end.
-export SEP1=" "
-export SEP2=" "
+export SEP1=""
+export SEP2="|"
 
 # Import the modules
 . "$DIR/bar-functions/dwm_countdown.sh"
@@ -83,12 +84,16 @@ do
 #    upperbar="$upperbar$(dwm_currency)"
    
     # Append results of each func one by one to the lowerbar string
-    lowerbar=""
+#    lowerbar=""
+#    lowerbar="$lowerbar$(dwm_resources)"
+    #lowerbar="$lowerbar$(dwm_ccurse)"
+    #lowerbar="$lowerbar${__DWM_BAR_WEATHER__}"
+    #lowerbar="$lowerbar$(dwm_alarm)"
 
     
     xsetroot -name "$upperbar"
     
     # Uncomment the line below to enable the lowerbar 
-#    xsetroot -name "$upperbar;$lowerbar"
+ #   xsetroot -name "$upperbar;$lowerbar"
     sleep 1
 done

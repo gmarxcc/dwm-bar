@@ -11,6 +11,7 @@ dwm_battery () {
 
     printf "%s" "$SEP1"
     if [ "$IDENTIFIER" = "" ]; then
+    #if [ "$IDENTIFIER" = "unicode" ]; then
         if [ "$STATUS" = "Charging" ]; then
             printf "🔌 %s%% %s" "$CHARGE" "$STATUS"
         else
@@ -18,9 +19,9 @@ dwm_battery () {
         fi
     else
 	    if [ "$STATUS" = "Charging" ]; then
-		    printf " %s%%" "$CHARGE"
+		    printf "  %s%%" "$CHARGE"
 	    else
-		    printf " %s%%" "$CHARGE"
+		    printf "  %s%%" "$CHARGE"
         #printf "BAT %s%% %s" "$CHARGE" "$STATUS"
 	    fi
     fi
